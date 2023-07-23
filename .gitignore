@@ -1,0 +1,5 @@
+__pycahche__/
+.vscode/
+groups_ids.txt
+api_info.py
+pyrogram_session/
