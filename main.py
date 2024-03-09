@@ -13,7 +13,7 @@ app = Client(
     api_id=api_id,
 )
 
-CHAT_ID = input("Enter chat id: ")
+CHAT_ID = int(input("Enter chat id: "))
 REACTION = input("Enter valid reaction: (eg 🗿)")
 
 @app.on_message(filters.chat(CHAT_ID))
