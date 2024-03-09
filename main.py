@@ -13,13 +13,13 @@ app = Client(
     api_id=api_id,
 )
 
-CHAT_ID = "Your chat id"
-
+CHAT_ID = input("Enter chat id: ")
+REACTION = input("Enter valid reaction: (eg 🗿)")
 
 @app.on_message(filters.chat(CHAT_ID))
 def handle_group_messages(client, message):
     if not message.from_user.is_self:
-        app.send_reaction(message.chat.id, message.id, "🗿")
+        app.send_reaction(message.chat.id, message.id, REACTION)
 
 
 app.run()
